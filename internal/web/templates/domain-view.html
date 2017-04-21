@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>EAGLE Argumentation Tool: Domain Model View</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="DomainView">
+
+	<div data-role="header">
+		<h1>Domain Model</h1>
+	</div>
+	
+	<div role="main" class="ui-content">
+		<form>
+<!--			
+	        <label for="id">Identifier:</label>
+			<input type="text" name="id" id="id" value="{{.Id}}">
+			<label for="revision">Revision:</label>
+			<input type="text" name="revision" id="revision" value="{{.Revision}}">
+-->
+			<label for="issue">Issue:</label>
+			<input type="text" name="issue" id="issue" value="{{.Issue}}">
+			<label for="options">Options:</label>
+			<ul>{{range $j, $option := .Options}}
+				 <li>{{$option}}</li>
+				 {{end}}
+			</ul>
+			<label for="description">Description:</label>
+			<textarea name="description" id="description">
+{{.Description}}
+			</textarea>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			    <a href="/eagle-argumentation-tool/search-form/{{.Id}}" target="_self" class="ui-btn">Find Cases</a>
+				<a href="/eagle-argumentation-tool/new-case-form/{{.Id}}" target="_self" class="ui-btn">New Case</a>
+			</fieldset>
+		</form>
+	</div>
+
+<!--
+	<div data-role="footer" data-id="main-footer" data-position="fixed">
+		<div data-role="navbar">
+	  		<ul>
+	    		<li><a href="/eagle-argumentation-tool/" class="ui-btn-active" data-icon="home">Home</a></li>
+	   			<li><a href="/eagle-argumentation-tool/eval-help" data-icon="info">Help</a></li>
+				<li><a href="/eagle-argumentation-tool/imprint" data-icon="info">Imprint</a></li>
+	  		</ul>
+		</div>
+	</div>
+-->
+</div> 
+</body>
+</html>

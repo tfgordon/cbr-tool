@@ -1,0 +1,8 @@
+{
+	"_id" : "_design/cases",
+	"views" : {
+		"statement" : {
+			"map" : "function(doc) { var l = {}; for (var s in doc.statements) { l[s] = doc.statements[s] }; emit(doc._id, { \"title\": doc.meta.title, \"year\": doc.meta.year, \"statements\": l }); }"
+		}
+	}
+}

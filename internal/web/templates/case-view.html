@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>EAGLE Argumentation Tool: Case View</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="CaseView">
+
+	<div data-role="header">
+		<h1>{{.Title}}</h1>
+	</div>
+	
+
+
+	<div role="main" class="ui-content">
+		<h2>Properties</h2>
+		<form action="/eagle-argumentation-tool/search" enctype="multipart/form-data" target="_self" data-ajax="false" method="post">
+			<input type="hidden" name="domainId" value="{{.DomainId}}">
+			<label for="title">Title:</label>
+			<input type="text" name="title" id="title" value="{{.Title}}">
+			<label for="citation">Citation:</label>
+			<input type="text" name="citation" id="citation" value="{{.Citation}}">
+			<label for="year">Year Decided:</label>
+			<input type="text" name="year" id="year" value="{{.Year}}">
+			<label for="court">Court:</label>
+			<input type="text" name="court" id="court" value="{{.Court}}">
+			<label for="majority">Author of Majority Opinion:</label>
+			<input type="text" name="majority" id="majority" value="{{.Majority}}">
+			<label for="minority">Author of Minority Opinion:</label>
+			<input type="text" name="minority" id="minority" value="{{.Minority}}">
+			<label for="keywords">Keywords:</label>
+			<input type="text" name="keywords" id="keywords" value="{{.Keywords}}">
+			<label for="language">Language:</label>
+			<input type="text" name="language" id="language" value="{{.Language}}">
+			<label for="description">Description:</label>
+			<textarea name="description" id="description">
+{{.Description}}
+			</textarea>
+			<fieldset data-role="controlgroup">
+				<legend>Case Decision:</legend>
+				{{range $id, $option := .Options}}
+				<input type="radio" name="decision" id="{{$id}}" value="{{$id}}" {{if $option.In}} checked="checked" {{end}}>
+			  	<label for="{{$id}}">{{$option.Statement}}</label>
+				{{end}}
+			</fieldset>
+			
+			<h2>Case Factors</h2>
+			
+			{{range $id, $dimension := .Dimensions}}
+			<fieldset data-role="controlgroup">
+				<legend>{{$dimension.Description}}:</legend>
+				{{range $factor := $dimension.Factors}}
+				<input type="radio" name="{{$dimension.Id}}" id="{{$factor.Id}}" value="{{$factor.Id}}" {{if $factor.Selected}} checked="checked" {{end}}>
+			  	<label for="{{$factor.Id}}">{{$factor.Text}}</label>
+				{{end}}
+			</fieldset>
+			{{end}}
+		    <fieldset data-role="controlgroup" data-type="horizontal">
+			    <input type="submit" value="Find Similar Cases"/>
+				<a href="/eagle-argumentation-tool/map-case/{{.Id}}" target="_self" class="ui-btn">Argument Map</a>
+				<a href="/eagle-argumentation-tool/edit-case/{{.DomainId}}/{{.Id}}" target="_self" class="ui-btn">Edit</a>
+				<a href="/eagle-argumentation-tool/delete-case/{{.Id}}" target="_self" class="ui-btn">Delete</a>
+			</fieldset>
+		</form>
+
+	</div>
+
+<!--
+	<div data-role="footer" data-id="main-footer" data-position="fixed">
+		<div data-role="navbar">
+	  		<ul>
+	    		<li><a href="/eagle-argumentation-tool/" class="ui-btn-active" data-icon="home">Home</a></li>
+	   			<li><a href="/eagle-argumentation-tool/eval-help" data-icon="info">Help</a></li>
+				<li><a href="/eagle-argumentation-tool/imprint" data-icon="info">Imprint</a></li>
+	  		</ul>
+		</div>
+	</div>
+-->
+</div> 
+</body>
+</html>

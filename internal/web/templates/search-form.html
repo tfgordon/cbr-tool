@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>EAGLE Argumentation Tool: Search Cases Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="SearchCasesForm">
+
+	<div data-role="header">
+		<h1>Search for Similar Cases</h1>
+	</div>
+	
+<div role="main" class="ui-content">
+		
+		<form action="/eagle-argumentation-tool/search" enctype="multipart/form-data" target="_self" data-ajax="false" method="post">
+			<input type="hidden" name="domainId" value="{{.Id}}">
+			<h2>Dimensions</h2>
+			
+			{{range $key, $dimension := .Dimensions}}
+			<fieldset data-role="controlgroup">
+				<legend>{{$dimension.Description}}:</legend>
+				{{range $j, $factor := $dimension.Factors}}
+				<input type="radio" name="{{$key}}" id="{{$factor}}" value={{$factor}} {{if eq $factor $dimension.Default }} checked="checked" {{end}} >
+			  	<label for="{{$factor}}">{{$factor}}</label>
+				{{end}}
+			</fieldset>
+			{{end}}
+	
+			<form>
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			        <input type="submit" value="Submit"/>
+			    </fieldset>
+			</form>
+		</form>
+	</div>
+
+<!--
+	<div data-role="footer" data-id="main-footer" data-position="fixed">
+		<div data-role="navbar">
+	  		<ul>
+	    		<li><a href="/eagle-argumentation-tool/" class="ui-btn-active" data-icon="home">Home</a></li>
+	   			<li><a href="/eagle-argumentation-tool/eval-help" data-icon="info">Help</a></li>
+				<li><a href="/eagle-argumentation-tool/imprint" data-icon="info">Imprint</a></li>
+	  		</ul>
+		</div>
+	</div>
+-->
+</div> 
+</body>
+</html>

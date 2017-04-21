@@ -1,0 +1,117 @@
+{
+    "Description": "Model of the dimensions of wild animal property cases",
+    "Issue": "Possession of Wild Animals",
+    "Options": [
+        "possession",
+        "no-possession"
+    ],
+    "Statements": {},
+    "Dimensions": {
+        "AC": {
+            "Default": "ac-none",
+            "Description": "Applicable Convention",
+            "Factors": [
+                "full-possession",
+                "informal-excluse-right",
+                "social-preference",
+                "ac-none"
+            ]
+        },
+        "COP": {
+            "Default": "cop-none",
+            "Description": "Closeness of Pursuit",
+            "Factors": [
+                "physical-possession",
+                "mortal-wounding",
+                "certain-capture",
+                "hot-pursuit",
+                "chasing",
+                "started-pursuit",
+                "cop-none"
+            ]
+        },
+        "DM": {
+            "Default": "dm-pleasure",
+            "Description": "Motive of Party Denying the Possession Claim",
+            "Factors": [
+                "dm-livelihood",
+                "dm-opportunistic",
+                "dm-altruism",
+                "dm-pleasure",
+                "dm-impulse",
+                "dm-malice"
+            ]
+        },
+        "DR": {
+            "Default": "dr-innocent",
+            "Description": "Role of Party Denying the Possession Claim",
+            "Factors": [
+                "dr-innocent",
+                "dr-jointly-responsible",
+                "dr-ignorant-of-the-law",
+                "dr-accident",
+                "dr-solely-responsible"
+            ]
+        },
+        "LO": {
+            "Default": "common",
+            "Description": "Land Ownership",
+            "Factors": [
+                "p-freehold",
+                "p-leasehold",
+                "p-rent",
+                "common",
+                "other-owner",
+                "d-rent",
+                "d-leasehold",
+                "d-freehold"
+            ]
+        },
+        "NOA": {
+            "Default": "act-ok",
+            "Description": "Nature of Act",
+            "Factors": [
+                "violently-illegal",
+                "illegal",
+                "nuisance",
+                "impolite",
+                "act-ok"
+            ]
+        },
+        "PM": {
+            "Default": "pm-pleasure",
+            "Description": "Motive of Party Claiming Possession",
+            "Factors": [
+                "pm-livelihood",
+                "pm-opportunistic",
+                "pm-altruism",
+                "pm-pleasure",
+                "pm-impulse",
+                "pm-malice"
+            ]
+        },
+        "QLC": {
+            "Default": "occasional-visitor",
+            "Description": "Quarry Land Connection",
+            "Factors": [
+                "resident",
+                "frequent-visitor",
+                "regular-visitor",
+                "occasional-visitor",
+                "transient",
+                "once-only"
+            ]
+        },
+        "QV": {
+            "Default": "qv-none",
+            "Description": "Quarry Value",
+            "Factors": [
+                "market-value",
+                "social-value",
+                "domestic-pet",
+                "personal-value",
+                "qv-none"
+            ]
+        }
+    }
+}

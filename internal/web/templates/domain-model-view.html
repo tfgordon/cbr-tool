@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>EAGLE Argumentation Tool: Domain Model View</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="mainPage">
+
+	<div data-role="header">
+		<h1>{{.Issue}}</h1>
+	</div>
+	
+	<!-- To Do:  Show metadata of the domain model here -->
+	<div role="main" class="ui-content">
+		<form>
+			<label for="issue">Issue:</label>
+			<input type="text" name="issue" id="issue" value="{{.Issue}}">
+			<label for="options">Options:</label>
+			<input type="text" name="options" id="options" value="{{.Options}}">
+			<label for="description">Description:</label>
+			<textarea name="description" id="description">
+{{.Description}}
+			</textarea>
+			<!-- To do: Display the factors of the domain model -->
+		</form>
+	</div>
+	
+	<h2>Actions</h2>
+
+	<div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
+		<li><a href="/eagle-argumentation-tool/new-case-form">Enter a new case</a></li>
+        <li><a href="/eagle-argumentation-tool/search-cases-form">Search for cases</a></li>
+		<li><a href="/eagle-argumentation-tool/download-domain-model/{{.Id}}" target="_self" class="ui-btn">Download this domain model</a></li>
+		<li><a href="/eagle-argumentation-tool/update-domain-model/{{.Id}}" target="_self" class="ui-btn">Upload a new version of this domain model</a></li>
+		<li><a href="/eagle-argumentation-tool/delete-domain-model/{{.Id}}" target="_self" class="ui-btn">Delete this domain model</a></li>
+    </ul>
+	</div>
+    
+<!--
+	<div data-role="footer" data-id="main-footer" data-position="fixed">
+		<div data-role="navbar">
+	  		<ul>
+	    		<li><a href="/eagle-argumentation-tool/" class="ui-btn-active" data-icon="home">Home</a></li>
+	   			<li><a href="/eagle-argumentation-tool/eval-help" data-icon="info">Help</a></li>
+				<li><a href="/eagle-argumentation-tool/imprint" data-icon="info">Imprint</a></li>
+	  		</ul>
+		</div>
+	</div>
+-->
+</div>
+
+</body>
+</html>

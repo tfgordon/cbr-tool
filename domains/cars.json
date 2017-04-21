@@ -1,0 +1,62 @@
+{
+    "Description": "Model of the dimensions of automobiles",
+    "Issue": "Choosing a car to buy",
+    "Options": [
+        "buy",
+        "do_not_buy"
+    ],
+    "Statements": {
+		"buy": "Buy this car.",
+		"do_not_buy": "Do not buy this car.",
+		"low_price": "The car is low priced.",
+		"medium_price": "The car is medium priced.",
+		"high_price": "The car is high priced.",
+		"sports_car": "The car is a sports car.",
+		"family_car": "The car is a family car.",
+		"sedan": "The car is a sedan.",
+		"low_speed": "The car is slow.",
+		"medium_speed": "The car is of medium speed.",
+		"fast_speed": "The car is fast.",
+		"low_safety": "The car has low safety.",
+		"medium_safety": "The car is medium safe.",
+		"high_safety": "The car is highly safe."
+	},
+    "Dimensions": {
+        "price": {
+            "Default": "medium_price",
+            "Description": "Price",
+            "Factors": [
+                "low_price",
+                "medium_price",
+                "high_price"
+            ]
+        },
+        "type": {
+            "Default": "sedan",
+            "Description": "Type",
+            "Factors": [
+                "sports_car",
+                "family_car",
+                "sedan"
+            ]
+        },
+        "speed": {
+            "Default": "medium_speed",
+            "Description": "Speed",
+            "Factors": [
+                "slow_speed",
+                "medium_speed",
+                "fast_speed"
+            ]
+        },
+        "safety": {
+            "Default": "medium_safety",
+            "Description": "Safety",
+            "Factors": [
+                "low_safety",
+                "medium_safety",
+                "high_safety"
+            ]
+        }
+    }
+}

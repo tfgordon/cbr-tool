@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>EAGLE Argumentation Tool: Search Results</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="SearchResults">
+
+	<div data-role="header">
+		<h1>Similar Cases Found</h1>
+	</div>
+	
+	<div role="main" class="ui-content">
+		
+	<p>The most similar cases for each option are listed, in order of similarity, 
+	showing the most similar cases first.</p>
+	
+		{{$domainId := .DomainId}}
+		{{range $option, $cases := .Options}}
+			<h3>{{$option}}</h3>
+			{{if $cases}}
+			<table data-role="table" id="table-column-toggle" class="ui-responsive table-stroke">
+			     <thead>
+			       <tr>
+			         <th data-priority="4">Rank</th>
+			         <th data-priority="1">Title</th>
+			         <th data-priority="3">Decision Year</th>
+			         <th data-priority="2">Similarity</th>
+			       </tr>
+			     </thead>
+			     <tbody>
+				   {{range $rank, $case := $cases}}
+			       <tr>
+			         <th>{{$rank}}</th>
+			         <td><a href="/eagle-argumentation-tool/view-case/{{$domainId}}/{{$case.Id}}" data-rel="external">{{$case.Title}}</a></td>
+			         <td>{{$case.Year}}</td>
+			         <td>{{printf "%.2f" $case.Similarity}}</td>
+			       </tr>
+				   {{end}}
+			    </tbody>
+			</table>
+			{{else}}
+			<p>No cases for this option</p>
+			{{end}}
+		{{end}}
+	</div>
+<!--
+	<div data-role="footer" data-id="main-footer" data-position="fixed">
+		<div data-role="navbar">
+	  		<ul>
+	    		<li><a href="/eagle-argumentation-tool/" class="ui-btn-active" data-icon="home">Home</a></li>
+	   			<li><a href="/eagle-argumentation-tool/eval-help" data-icon="info">Help</a></li>
+				<li><a href="/eagle-argumentation-tool/imprint" data-icon="info">Imprint</a></li>
+	  		</ul>
+		</div>
+	</div>
+-->
+</div> 
+</body>
+</html>

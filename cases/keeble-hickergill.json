@@ -1,0 +1,135 @@
+{
+   "_id": "8a57ef6f-691b-11e5-8122-001b639f006e",
+   "_rev": "4-d66aa0568915178a1b8e99c9a98f2312",
+   "meta": {
+       "citation": "(1707) 11 East 574; 103 ER 1127",
+       "court": "Queen's Bench",
+       "decided": "1707",
+       "description": "Samuel Keeble (the plaintiff) owned property called Minott’s Meadow, which \r\ncontained a pond outfitted with nets and channels in a manner used to catch \r\nlarge numbers of commercially viable ducks. This type of pond served as a \r\nsort of \"duck trap\" and was known as a decoy, unlike modern duck decoys,\r\nwhich are merely fake ducks used to beguile this social bird. Actual \r\ntame ducks were used to lure their wild counterparts into the decoy. \r\nOn three occasions, defendant Edmund Hickeringill, while on his own \r\nland, discharged firearms toward Keeble's pond in order to scare away \r\nthe ducks. At trial, Keeble won a verdict of £20. \r\nSource: <https://en.wikipedia.org/wiki/Keeble_v_Hickeringill>\r\n\t\t\t",
+       "keywords": "wild animals, possession",
+       "language": "English",
+       "license": "CC-BY-SA",
+       "majority": "C.J. Holt",
+       "minority": "",
+       "title": "Keeble v Hickergill "
+   },
+   "issues": {
+       "i1": {
+           "meta": null,
+           "positions": [
+               "possession",
+               "no-possession"
+           ],
+           "standard": "PE"
+       }
+   },
+   "statements": {
+       "ac-none": {
+           "meta": null,
+           "text": "ac-none",
+           "assumed": true,
+           "label": "in"
+       },
+       "certain-capture": {
+           "meta": null,
+           "text": "certain-capture",
+           "assumed": true,
+           "label": "in"
+       },
+       "dm-malice": {
+           "meta": null,
+           "text": "dm-malice",
+           "assumed": true,
+           "label": "in"
+       },
+       "dr-solely-responsible": {
+           "meta": null,
+           "text": "dr-solely-responsible",
+           "assumed": true,
+           "label": "in"
+       },
+       "frequent-visitor": {
+           "meta": null,
+           "text": "frequent-visitor",
+           "assumed": true,
+           "label": "in"
+       },
+       "market-value": {
+           "meta": null,
+           "text": "market-value",
+           "assumed": true,
+           "label": "in"
+       },
+       "no-possession": {
+           "meta": null,
+           "text": "The party claiming possession did not have possession.",
+           "assumed": false,
+           "label": "out"
+       },
+       "nuisance": {
+           "meta": null,
+           "text": "nuisance",
+           "assumed": true,
+           "label": "in"
+       },
+       "p-leasehold": {
+           "meta": null,
+           "text": "p-leasehold",
+           "assumed": true,
+           "label": "in"
+       },
+       "pm-livelihood": {
+           "meta": null,
+           "text": "pm-livelihood",
+           "assumed": true,
+           "label": "in"
+       },
+       "possession": {
+           "meta": null,
+           "text": "The party claiming possession did have possession.",
+           "assumed": false,
+           "label": "in"
+       }
+   },
+   "arguments": {
+       "a1": {
+           "meta": null,
+           "scheme": "possession-scheme",
+           "premises": [
+               "frequent-visitor",
+               "dm-malice",
+               "dr-solely-responsible",
+               "certain-capture",
+               "nuisance",
+               "p-leasehold",
+               "ac-none",
+               "market-value",
+               "pm-livelihood"
+           ],
+           "conclusion": "possession",
+           "undercutter": "",
+           "weight": 0
+       },
+       "a2": {
+           "meta": null,
+           "scheme": "no-possession-scheme",
+           "premises": [
+               "frequent-visitor",
+               "dm-malice",
+               "dr-solely-responsible",
+               "certain-capture",
+               "nuisance",
+               "p-leasehold",
+               "ac-none",
+               "market-value",
+               "pm-livelihood"
+           ],
+           "conclusion": "no-possession",
+           "undercutter": "",
+           "weight": 0
+       }
+   },
+   "references": {
+   }
+}
+  

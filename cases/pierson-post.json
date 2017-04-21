@@ -1,0 +1,134 @@
+{
+   "_id": "687c085c-6363-11e5-989b-001b639f006e",
+   "_rev": "1-2734ecc5224c597a314cd67a2e43ced3",
+   "meta": {
+       "citation": "3 Cai. R. 175, 2 Am. Dec. 264 (N.Y. 1805)",
+       "court": "Supreme Court of New York",
+       "decided": "1805",
+       "description": "Lodowick Post, a fox hunter, was chasing a \r\nfox through a vacant lot when Pierson came across the fox and,\r\nknowing it was being chased by another, killed the fox and took it\r\naway. Post sued Pierson on an action for trespass on the case for\r\ndamages against his possession of the fox. Post argued that he had\r\nownership of the fox as giving chase to an animal in the course of\r\nhunting it was sufficient to establish possession. The trial court\r\nfound in favor of Post. On appeal after the trial, the issue put to\r\nthe Supreme Court of Judicature of New York was whether one could\r\nobtain property rights to a wild animal (Ferae naturae), in this\r\ncase the fox, by pursuit. Source: Wikipedia\r\n\t\t\t",
+       "keywords": "wild animals, possession",
+       "language": "English",
+       "license": "CC-BY-SA",
+       "majority": "Daniel Tompkins",
+       "minority": "Henry Brockholst Livingston",
+       "title": "Pierson v Post"
+   },
+   "issues": {
+       "i1": {
+           "meta": null,
+           "positions": [
+               "possession",
+               "no-possession"
+           ],
+           "standard": "PE"
+       }
+   },
+   "statements": {
+       "dm-livelihood": {
+           "meta": null,
+           "text": "dm-livelihood",
+           "assumed": true,
+           "label": "in"
+       },
+       "dr-innocent": {
+           "meta": null,
+           "text": "dr-innocent",
+           "assumed": true,
+           "label": "in"
+       },
+       "full-possession": {
+           "meta": null,
+           "text": "full-possession",
+           "assumed": true,
+           "label": "in"
+       },
+       "market-value": {
+           "meta": null,
+           "text": "market-value",
+           "assumed": true,
+           "label": "in"
+       },
+       "no-possession": {
+           "meta": null,
+           "text": "The party claiming possession did not have possession.",
+           "assumed": false,
+           "label": "in"
+       },
+       "p-freehold": {
+           "meta": null,
+           "text": "p-freehold",
+           "assumed": true,
+           "label": "in"
+       },
+       "physical-possession": {
+           "meta": null,
+           "text": "physical-possession",
+           "assumed": true,
+           "label": "in"
+       },
+       "pm-livelihood": {
+           "meta": null,
+           "text": "pm-livelihood",
+           "assumed": true,
+           "label": "in"
+       },
+       "possession": {
+           "meta": null,
+           "text": "The party claiming possession did have possession.",
+           "assumed": false,
+           "label": "out"
+       },
+       "resident": {
+           "meta": null,
+           "text": "resident",
+           "assumed": true,
+           "label": "in"
+       },
+       "violently-illegal": {
+           "meta": null,
+           "text": "violently-illegal",
+           "assumed": true,
+           "label": "in"
+       }
+   },
+   "arguments": {
+       "a1": {
+           "meta": null,
+           "scheme": "possession-scheme",
+           "premises": [
+               "full-possession",
+               "physical-possession",
+               "market-value",
+               "dm-livelihood",
+               "p-freehold",
+               "violently-illegal",
+               "pm-livelihood",
+               "dr-innocent",
+               "resident"
+           ],
+           "conclusion": "possession",
+           "undercutter": "",
+           "weight": 0
+       },
+       "a2": {
+           "meta": null,
+           "scheme": "no-possession-scheme",
+           "premises": [
+               "full-possession",
+               "physical-possession",
+               "market-value",
+               "dm-livelihood",
+               "p-freehold",
+               "violently-illegal",
+               "pm-livelihood",
+               "dr-innocent",
+               "resident"
+           ],
+           "conclusion": "no-possession",
+           "undercutter": "",
+           "weight": 0
+       }
+   },
+   "references": {
+   }
+}
